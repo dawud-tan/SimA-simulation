@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Configuration xmlns="https://www.unrealengine.com/BuildConfiguration">
+  <BuildConfiguration>
+    <!-- Unity builds concatenate many .cpp files into one translation unit.
+         On 8 cores with a mechanical disk this is a large net win. -->
+    <bUseUnityBuild>true</bUseUnityBuild>
+    <bUseUBTMakefiles>true</bUseUBTMakefiles>
+  </BuildConfiguration>
+  <ParallelExecutor>
+    <!-- 8 physical cores, no SMT. Leaving 2 free keeps the desktop usable
+         across a multi-hour build. -->
+    <MaxProcessorCount>6</MaxProcessorCount>
+    <!-- The setting that actually prevents OOM: UBT throttles by available
+         RAM rather than core count. 3 GiB/action against 16 GiB total caps
+         concurrent link actions at ~5, which is what keeps the OOM killer
+         away during the UnrealEditor-*.so link phase. -->
+    <MemoryPerActionBytes>3221225472</MemoryPerActionBytes>
+  </ParallelExecutor>
+  <LocalExecutor>
+    <MaxProcessorCount>6</MaxProcessorCount>
+  </LocalExecutor>
+</Configuration>

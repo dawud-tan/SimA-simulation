@@ -1,0 +1,46 @@
+--- a/src/chrono_vehicle/wheeled_vehicle/tire/ChTMeasyTire.h
++++ b/src/chrono_vehicle/wheeled_vehicle/tire/ChTMeasyTire.h
+@@ -147,6 +147,43 @@
+     /// Set rolling resistance coefficients (default: 0.01).
+     void SetRollingResistanceCoefficient(double coef) { m_rolling_resistance = coef; }
+ 
++    /// Set the Dahl standstill friction parameters (SIM A patch).
++    ///
++    /// Below m_frblend_begin the tire force is 100% the Dahl bristle model:
++    ///     F = sigma0*z + sigma1*dz/dt
++    /// The damping term is viscous in the SLIP velocity, and with the stock
++    /// sigma1 = 5000 N.s/m a slip of only 0.1 m/s produces 500 N per tire.
++    /// Across four tires that is 2000 N, essentially the whole gravity
++    /// component on a 12% grade -- so a freely rolling vehicle is taxed
++    /// almost the entire force that should be accelerating it.
++    ///
++    /// Measured with the stock values: a car in neutral on a 12% slope rolls
++    /// back 49% short of g*sin(theta), and full brake will not hold it.
++    ///
++    /// sigma0 provides the standstill HOLD and is not the problem. These are
++    /// exposed so the two can be tuned independently against a measurement.
++    /// NOTHING IS CHANGED BY DEFAULT: this patch is purely additive.
++    void SetDahlParameters(double sigma0, double sigma1) {
++        m_par.sigma0 = sigma0;
++        m_par.sigma1 = sigma1;
++    }
++    double GetDahlSigma0() const { return m_par.sigma0; }
++    double GetDahlSigma1() const { return m_par.sigma1; }
++
++    /// Set the speed band over which the Dahl standstill model blends into
++    /// the normal TMeasy slip model (stock: 1.0 to 3.0 m/s).
++    ///
++    /// ChTMeasyTire also skips the aligning moment Mz entirely below
++    /// m_frblend_begin, so this threshold additionally decides the speed
++    /// below which there is NO steering feel at all.
++    void SetFrictionBlendRange(double v_begin, double v_end) {
++        m_frblend_begin = v_begin;
++        m_frblend_end = v_end;
++    }
++    double GetFrictionBlendBegin() const { return m_frblend_begin; }
++    double GetFrictionBlendEnd() const { return m_frblend_end; }
++
++
+     /// Generate basic tire plots.
+     /// This function creates a Gnuplot script file with the specified name.
+     void WritePlots(const std::string& plFileName, const std::string& plTireFormat);

@@ -1,0 +1,7 @@
+{
+  "Name": "Innova Rear Brake",
+  "Type": "Brake",
+  "Template": "BrakeShafts",
+  "Shaft Inertia": 0.4,
+  "Maximum Torque": 961.4
+}

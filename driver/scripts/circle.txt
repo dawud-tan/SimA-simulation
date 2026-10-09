@@ -1,0 +1,15 @@
+# Two minutes of a slow circle at idle, for measuring the 1 kHz loop in the
+# editor under a steady rendering load (task 5).
+#
+# The car must MOVE -- tyres slipping, suspension working, the referee fed --
+# and must stay on the course's flat approach patch (x -35..129, y -20..20)
+# for the whole run. Right lock 0.6 is ~20 deg of road-wheel angle, a
+# ~7.6 m radius centred 7.6 m to the right of the spawn: x -7.6..7.6,
+# y -15.2..0. In 1st with the pedal up and no throttle the governor holds
+# idle (task 8), so the speed is the idle speed at this lock, ~1.2 m/s.
+
+#  t      steer  throttle  brake  clutch  gear
+  0.0     0.6    0.00      0.0    1.0     1
+  1.0     0.6    0.00      0.0    1.0     1
+  3.0     0.6    0.00      0.0    0.0     1   # pedal up over 2 s
+120.0     0.6    0.00      0.0    0.0     1

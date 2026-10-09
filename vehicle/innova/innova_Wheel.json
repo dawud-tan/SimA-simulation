@@ -1,0 +1,13 @@
+{
+  "Name": "Innova Wheel",
+  "Type": "Wheel",
+  "Template": "Wheel",
+  "Mass": 11.5,
+  "Inertia": [
+    0.35,
+    0.62,
+    0.35
+  ],
+  "Radius": 0.203,
+  "Width": 0.205
+}

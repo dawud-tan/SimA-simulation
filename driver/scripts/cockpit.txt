@@ -1,0 +1,14 @@
+# The driver's-seat check for task 9: the car held still at the start pose,
+# looking down the slalom, with the wheel turned right to steer 0.2.
+#
+# 0.2 x 612.5 deg (the pinion's maximum, innova_Steering.json) is 122.5 deg
+# of rim, so the rim's pale stripe must sit at about four o'clock --
+# clockwise, as the driver sees it -- and nowhere else. A sign error puts it
+# at eight o'clock; a scale error anywhere but four.
+#
+# Brake held and in neutral with the pedal down: the view does not move.
+
+#  t      steer  throttle  brake  clutch  gear
+  0.0     0.0    0.00      1.0    1.0     0
+  1.0     0.2    0.00      1.0    1.0     0
+ 60.0     0.2    0.00      1.0    1.0     0

@@ -1,0 +1,13 @@
+# Task 17's check: the car held still at the start, the driver glancing at
+# the LEFT door mirror -- from the right-hand seat it is 55 deg left of
+# ahead, outside the forward view, and both parking spaces are on the left.
+# The glance takes 0.25 s, as DRV_RATE_GLANCE turns it from a held key, and
+# is held: cockpit/run.sh takes its frame at 30 s, well inside.
+#
+# Brake held, in neutral with the pedal down: the view does not move.
+
+#  t      steer  throttle  brake  clutch  gear  glance
+  0.0     0.0    0.00      1.0    1.0     0     0.0
+  1.0     0.0    0.00      1.0    1.0     0     0.0
+  1.25    0.0    0.00      1.0    1.0     0    -1.0
+ 60.0     0.0    0.00      1.0    1.0     0    -1.0

@@ -1,0 +1,19 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "0.1",
+  "FriendlyName": "Chrono Bridge",
+  "Description": "Bridges Project Chrono multibody dynamics into Unreal via a pure-C ABI wall.",
+  "Category": "Physics",
+  "CreatedBy": "",
+  "CanContainContent": false,
+  "IsBetaVersion": true,
+  "Installed": false,
+  "Modules": [
+    {
+      "Name": "ChronoBridge",
+      "Type": "Runtime",
+      "LoadingPhase": "PreDefault"
+    }
+  ]
+}

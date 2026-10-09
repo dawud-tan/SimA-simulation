@@ -1,0 +1,123 @@
+{
+  "Name": "Innova Rear Solid Axle (4-link approximated as three-link)",
+  "Type": "Suspension",
+  "Template": "SolidThreeLinkAxle",
+  "Spindle": {
+    "Mass": 12.0,
+    "COM": [
+      0,
+      0.77,
+      0
+    ],
+    "Inertia": [
+      0.03,
+      0.06,
+      0.03
+    ],
+    "Radius": 0.1,
+    "Width": 0.04
+  },
+  "Axle Tube": {
+    "Mass": 110.0,
+    "COM": [
+      0,
+      0,
+      0
+    ],
+    "Inertia": [
+      21.74,
+      1.2,
+      21.74
+    ],
+    "Radius": 0.045
+  },
+  "Triangular Link": {
+    "Mass": 12.0,
+    "Inertia": [
+      0.12,
+      0.12,
+      0.12
+    ],
+    "Location Chassis": [
+      0.42,
+      0.3,
+      0.17
+    ],
+    "Location Axle": [
+      0.0,
+      0.0,
+      0.14
+    ]
+  },
+  "Longitudinal Link": {
+    "Mass": 9.0,
+    "Inertia": [
+      0.25,
+      0.05,
+      0.25
+    ],
+    "Location Chassis": [
+      0.52,
+      0.52,
+      -0.06
+    ],
+    "Location Axle": [
+      -0.3,
+      0.56,
+      -0.08
+    ]
+  },
+  "Spring": {
+    "Location Chassis": [
+      0.0,
+      0.52,
+      0.26
+    ],
+    "Location Axle": [
+      0.0,
+      0.55,
+      -0.03
+    ],
+    "Free Length": 0.4272,
+    "Spring Coefficient": 23670.2,
+    "Minimum Length": 0.202,
+    "Maximum Length": 0.391
+  },
+  "Shock": {
+    "Location Chassis": [
+      -0.12,
+      0.58,
+      0.24
+    ],
+    "Location Axle": [
+      -0.14,
+      0.6,
+      -0.05
+    ],
+    "Damping Curve Data": [
+      [
+        -1.0,
+        -1672.3520839755445
+      ],
+      [
+        -0.3,
+        -585.3232293914406
+      ],
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.3,
+        301.023375115598
+      ],
+      [
+        1.0,
+        836.1760419877722
+      ]
+    ]
+  },
+  "Axle": {
+    "Inertia": 0.35
+  }
+}

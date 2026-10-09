@@ -1,0 +1,480 @@
+{
+  "meta": {
+    "generator": "gen_course.py",
+    "frame": "chrono ISO 8855: X forward, Y left, Z up, metres",
+    "note": "GENERATED FILE -- edit gen_course.py, never this.",
+    "course_length_m": 164.685
+  },
+  "vehicle": {
+    "length": 4.735,
+    "width": 1.83,
+    "wheelbase": 2.75,
+    "track": 1.54,
+    "front_overhang": 0.88,
+    "r_roll": 0.3331,
+    "rear_overhang": 1.105,
+    "delta_max_deg": 35.36,
+    "r_rear_axle": 3.8754,
+    "r_swept_outer": 6.0104,
+    "r_swept_inner": 3.1599
+  },
+  "derived_minima": {
+    "slalom_cone_spacing": 5.3559,
+    "parallel_slot_length": 6.566,
+    "bay_aisle_width": 3.0562,
+    "hill_grade_traction_limit": 0.423
+  },
+  "configured": {
+    "slalom_cone_spacing": 7.102500000000001,
+    "parallel_slot_length": 7.102500000000001,
+    "bay_aisle_width": 6.0,
+    "hill_grade": 0.2679491924311227,
+    "rollback_max": 0.0
+  },
+  "start": {
+    "x": 0.0,
+    "y": 0.0,
+    "yaw": 0.0,
+    "z": 0.45
+  },
+  "cones": [
+    {
+      "id": 0,
+      "x": 20.0,
+      "y": 0.0,
+      "radius": 0.15,
+      "height": 0.7,
+      "exercise": "slalom"
+    },
+    {
+      "id": 1,
+      "x": 27.1025,
+      "y": 0.0,
+      "radius": 0.15,
+      "height": 0.7,
+      "exercise": "slalom"
+    },
+    {
+      "id": 2,
+      "x": 34.205,
+      "y": 0.0,
+      "radius": 0.15,
+      "height": 0.7,
+      "exercise": "slalom"
+    },
+    {
+      "id": 3,
+      "x": 41.3075,
+      "y": 0.0,
+      "radius": 0.15,
+      "height": 0.7,
+      "exercise": "slalom"
+    },
+    {
+      "id": 4,
+      "x": 48.41,
+      "y": 0.0,
+      "radius": 0.15,
+      "height": 0.7,
+      "exercise": "slalom"
+    },
+    {
+      "id": 5,
+      "x": 55.5125,
+      "y": 0.0,
+      "radius": 0.15,
+      "height": 0.7,
+      "exercise": "slalom"
+    },
+    {
+      "id": 6,
+      "x": 62.615,
+      "y": 0.0,
+      "radius": 0.15,
+      "height": 0.7,
+      "exercise": "slalom"
+    },
+    {
+      "id": 7,
+      "x": 69.7175,
+      "y": 0.0,
+      "radius": 0.15,
+      "height": 0.7,
+      "exercise": "slalom"
+    },
+    {
+      "id": 8,
+      "x": 76.82,
+      "y": 0.0,
+      "radius": 0.15,
+      "height": 0.7,
+      "exercise": "slalom"
+    },
+    {
+      "id": 9,
+      "x": 86.82,
+      "y": 0.255,
+      "radius": 0.15,
+      "height": 0.7,
+      "exercise": "parallel"
+    },
+    {
+      "id": 10,
+      "x": 93.9225,
+      "y": 0.255,
+      "radius": 0.15,
+      "height": 0.7,
+      "exercise": "parallel"
+    }
+  ],
+  "lines": [
+    {
+      "id": 0,
+      "kind": "kerb",
+      "exercise": "parallel",
+      "x0": 82.82,
+      "y0": 3.0,
+      "x1": 101.9225,
+      "y1": 3.0
+    },
+    {
+      "id": 1,
+      "kind": "bay_edge",
+      "exercise": "bay",
+      "x0": 108.9225,
+      "y0": 4.0,
+      "x1": 108.9225,
+      "y1": 11.1025
+    },
+    {
+      "id": 2,
+      "kind": "bay_edge",
+      "exercise": "bay",
+      "x0": 111.6675,
+      "y0": 4.0,
+      "x1": 111.6675,
+      "y1": 11.1025
+    },
+    {
+      "id": 3,
+      "kind": "bay_end",
+      "exercise": "bay",
+      "x0": 108.9225,
+      "y0": 11.1025,
+      "x1": 111.6675,
+      "y1": 11.1025
+    },
+    {
+      "id": 4,
+      "kind": "aisle_edge",
+      "exercise": "bay",
+      "x0": 103.9225,
+      "y0": -2.0,
+      "x1": 128.9225,
+      "y1": -2.0
+    }
+  ],
+  "gates": [
+    {
+      "id": 0,
+      "seq": 0,
+      "x0": 15.0,
+      "y0": -3.0,
+      "x1": 15.0,
+      "y1": 3.0,
+      "exercise": "slalom"
+    },
+    {
+      "id": 1,
+      "seq": 1,
+      "x0": 20.0,
+      "y0": 0.15,
+      "x1": 20.0,
+      "y1": 3.0,
+      "exercise": "slalom"
+    },
+    {
+      "id": 2,
+      "seq": 2,
+      "x0": 27.1025,
+      "y0": -0.15,
+      "x1": 27.1025,
+      "y1": -3.0,
+      "exercise": "slalom"
+    },
+    {
+      "id": 3,
+      "seq": 3,
+      "x0": 34.205,
+      "y0": 0.15,
+      "x1": 34.205,
+      "y1": 3.0,
+      "exercise": "slalom"
+    },
+    {
+      "id": 4,
+      "seq": 4,
+      "x0": 41.3075,
+      "y0": -0.15,
+      "x1": 41.3075,
+      "y1": -3.0,
+      "exercise": "slalom"
+    },
+    {
+      "id": 5,
+      "seq": 5,
+      "x0": 48.41,
+      "y0": 0.15,
+      "x1": 48.41,
+      "y1": 3.0,
+      "exercise": "slalom"
+    },
+    {
+      "id": 6,
+      "seq": 6,
+      "x0": 55.5125,
+      "y0": -0.15,
+      "x1": 55.5125,
+      "y1": -3.0,
+      "exercise": "slalom"
+    },
+    {
+      "id": 7,
+      "seq": 7,
+      "x0": 62.615,
+      "y0": 0.15,
+      "x1": 62.615,
+      "y1": 3.0,
+      "exercise": "slalom"
+    },
+    {
+      "id": 8,
+      "seq": 8,
+      "x0": 69.7175,
+      "y0": -0.15,
+      "x1": 69.7175,
+      "y1": -3.0,
+      "exercise": "slalom"
+    },
+    {
+      "id": 9,
+      "seq": 9,
+      "x0": 76.82,
+      "y0": 0.15,
+      "x1": 76.82,
+      "y1": 3.0,
+      "exercise": "slalom"
+    },
+    {
+      "id": 10,
+      "seq": 10,
+      "x0": 80.82,
+      "y0": -3.0,
+      "x1": 80.82,
+      "y1": 3.0,
+      "exercise": "parallel"
+    },
+    {
+      "id": 11,
+      "seq": 11,
+      "x0": 100.9225,
+      "y0": -2.0,
+      "x1": 100.9225,
+      "y1": 4.0,
+      "exercise": "bay"
+    },
+    {
+      "id": 12,
+      "seq": 12,
+      "x0": 126.9225,
+      "y0": -4.0,
+      "x1": 126.9225,
+      "y1": 4.0,
+      "exercise": "hill"
+    },
+    {
+      "id": 13,
+      "seq": 13,
+      "x0": 133.5876,
+      "y0": -4.0,
+      "x1": 133.5876,
+      "y1": 4.0,
+      "exercise": "hill_stop"
+    },
+    {
+      "id": 14,
+      "seq": 14,
+      "x0": 154.6853,
+      "y0": -4.0,
+      "x1": 154.6853,
+      "y1": 4.0,
+      "exercise": "hill_crest"
+    }
+  ],
+  "zones": [
+    {
+      "id": 0,
+      "kind": "parking_bay",
+      "exercise": "parallel",
+      "heading": 0.0,
+      "poly": [
+        [
+          86.82,
+          3.0
+        ],
+        [
+          93.9225,
+          3.0
+        ],
+        [
+          93.9225,
+          0.255
+        ],
+        [
+          86.82,
+          0.255
+        ]
+      ]
+    },
+    {
+      "id": 1,
+      "kind": "parking_bay",
+      "exercise": "bay",
+      "heading": -1.570796,
+      "poly": [
+        [
+          108.9225,
+          4.0
+        ],
+        [
+          111.6675,
+          4.0
+        ],
+        [
+          111.6675,
+          11.1025
+        ],
+        [
+          108.9225,
+          11.1025
+        ]
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": 1,
+      "name": "slalom",
+      "kind": "gated",
+      "entry_gate": 0,
+      "exit_gate": 9,
+      "zone": -1
+    },
+    {
+      "id": 2,
+      "name": "parallel",
+      "kind": "park",
+      "entry_gate": 10,
+      "exit_gate": -1,
+      "zone": 0
+    },
+    {
+      "id": 3,
+      "name": "bay",
+      "kind": "park",
+      "entry_gate": 11,
+      "exit_gate": -1,
+      "zone": 1
+    },
+    {
+      "id": 4,
+      "name": "hill",
+      "kind": "hill",
+      "entry_gate": 12,
+      "exit_gate": 14,
+      "zone": -1
+    }
+  ],
+  "patches": [
+    {
+      "kind": "flat",
+      "exercise": "approach",
+      "x0": -20.0,
+      "x1": 128.9225,
+      "z0": 0.0,
+      "z1": 0.0,
+      "grade": 0.0,
+      "width": 40.0,
+      "center_x": 54.4613,
+      "center_y": 0.0,
+      "center_z": 0.0,
+      "length": 148.9225,
+      "pitch_rad": -0.0,
+      "friction": 0.9
+    },
+    {
+      "kind": "ramp",
+      "exercise": "hill",
+      "x0": 128.9225,
+      "x1": 138.2526,
+      "z0": 0.0,
+      "z1": 2.5,
+      "grade": 0.267949,
+      "width": 8.0,
+      "center_x": 133.5876,
+      "center_y": 0.0,
+      "center_z": 1.25,
+      "length": 9.6593,
+      "pitch_rad": -0.26179939,
+      "friction": 0.9
+    },
+    {
+      "kind": "flat",
+      "exercise": "crest",
+      "x0": 138.2526,
+      "x1": 145.3551,
+      "z0": 2.5,
+      "z1": 2.5,
+      "grade": 0.0,
+      "width": 8.0,
+      "center_x": 141.8039,
+      "center_y": 0.0,
+      "center_z": 2.5,
+      "length": 7.1025,
+      "pitch_rad": -0.0,
+      "friction": 0.9
+    },
+    {
+      "kind": "ramp",
+      "exercise": "hill",
+      "x0": 145.3551,
+      "x1": 154.6853,
+      "z0": 2.5,
+      "z1": 0.0,
+      "grade": -0.267949,
+      "width": 8.0,
+      "center_x": 150.0202,
+      "center_y": 0.0,
+      "center_z": 1.25,
+      "length": 9.6593,
+      "pitch_rad": 0.26179939,
+      "friction": 0.9
+    },
+    {
+      "kind": "flat",
+      "exercise": "crest",
+      "x0": 154.6853,
+      "x1": 174.6853,
+      "z0": 0.0,
+      "z1": 0.0,
+      "grade": 0.0,
+      "width": 40.0,
+      "center_x": 164.6853,
+      "center_y": 0.0,
+      "center_z": 0.0,
+      "length": 20.0,
+      "pitch_rad": -0.0,
+      "friction": 0.9
+    }
+  ]
+}

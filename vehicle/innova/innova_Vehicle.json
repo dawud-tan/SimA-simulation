@@ -1,0 +1,60 @@
+{
+  "Name": "Toyota Kijang Innova Reborn 2.4 G MT",
+  "Type": "Vehicle",
+  "Template": "WheeledVehicle",
+  "Chassis": {
+    "Input File": "innova/innova_Chassis.json"
+  },
+  "Axles": [
+    {
+      "Suspension Input File": "innova/innova_FrontSusp.json",
+      "Suspension Location": [
+        0,
+        0,
+        0
+      ],
+      "Steering Index": 0,
+      "Left Wheel Input File": "innova/innova_Wheel.json",
+      "Right Wheel Input File": "innova/innova_Wheel.json",
+      "Left Brake Input File": "innova/innova_BrakeFront.json",
+      "Right Brake Input File": "innova/innova_BrakeFront.json"
+    },
+    {
+      "Suspension Input File": "innova/innova_RearSusp.json",
+      "Suspension Location": [
+        -2.75,
+        0,
+        0
+      ],
+      "Left Wheel Input File": "innova/innova_Wheel.json",
+      "Right Wheel Input File": "innova/innova_Wheel.json",
+      "Left Brake Input File": "innova/innova_BrakeRear.json",
+      "Right Brake Input File": "innova/innova_BrakeRear.json"
+    }
+  ],
+  "Steering Subsystems": [
+    {
+      "Input File": "innova/innova_Steering.json",
+      "Location": [
+        -0.145,
+        0,
+        -0.1
+      ],
+      "Orientation": [
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "Driveline": {
+    "Input File": "innova/innova_Driveline.json",
+    "Suspension Indexes": [
+      1
+    ]
+  },
+  "Wheelbase": 2.75,
+  "Minimum Turning Radius": 5.4,
+  "Maximum Steering Angle (deg)": 35.0
+}

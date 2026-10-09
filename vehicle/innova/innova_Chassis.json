@@ -1,0 +1,70 @@
+{
+  "Name": "Innova Reborn Chassis",
+  "Type": "Chassis",
+  "Template": "RigidChassis",
+  "Components": [
+    {
+      "Centroidal Frame": {
+        "Location": [
+          -1.2168020833333335,
+          0,
+          0.3679
+        ],
+        "Orientation": [
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "Mass": 1440.0,
+      "Moments of Inertia": [
+        442.4725875000001,
+        2060.7930149999997,
+        2269.3465874999997
+      ],
+      "Products of Inertia": [
+        0,
+        0,
+        0
+      ],
+      "Void": false
+    }
+  ],
+  "Driver Position": {
+    "Location": [
+      -1.35,
+      -0.38,
+      1.0336
+    ],
+    "Orientation": [
+      1,
+      0,
+      0,
+      0
+    ]
+  },
+  "Visualization": {
+    "Primitives": [
+      {
+        "Type": "Box",
+        "Location": [
+          -1.2925,
+          0,
+          0.62
+        ],
+        "Orientation": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "Dimensions": [
+          4.02475,
+          1.647,
+          0.9872500000000001
+        ]
+      }
+    ]
+  }
+}

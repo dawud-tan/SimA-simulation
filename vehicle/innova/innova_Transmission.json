@@ -1,0 +1,20 @@
+{
+  "Name": "Innova 5-Speed Manual",
+  "Type": "Transmission",
+  "Template": "ManualTransmissionShafts",
+  "Transmission Block Inertia": 0.4,
+  "Input Shaft Inertia": 0.3,
+  "Motorshaft Inertia": 0.5,
+  "Driveshaft Inertia": 0.5,
+  "Clutch Torque Limit": 600.0,
+  "Gear Box": {
+    "Reverse Gear Ratio": -0.23696682464454977,
+    "Forward Gear Ratios": [
+      0.231857,
+      0.429185,
+      0.696379,
+      1.0,
+      1.193317
+    ]
+  }
+}

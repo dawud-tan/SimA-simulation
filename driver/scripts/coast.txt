@@ -1,0 +1,19 @@
+# Diagnostic: accelerate, then COAST with the clutch in.
+#
+# Isolates drive torque as the driver of the residual zero-steer drift. The
+# driveline reacts engine torque as a ROLL moment on the chassis
+# (innova_Driveline.json, Motor Block direction [1,0,0]), roll produces roll
+# steer, and roll steer curves the car. Declutching removes the torque without
+# changing anything else -- speed, geometry, tyre loads all carry over.
+#
+# If curvature continues unchanged while coasting, torque reaction is NOT the
+# cause and something static is still wrong. If it flattens out, it is.
+
+#  t     steer  throttle  brake  clutch  gear
+  0.0     0.0    0.00      0.0    1.0     1
+  0.5     0.0    0.00      0.0    1.0     1
+  1.0     0.0    0.25      0.0    1.0     1
+  2.5     0.0    0.35      0.0    0.0     1
+ 12.0     0.0    0.35      0.0    0.0     1
+ 12.2     0.0    0.00      0.0    1.0     1   # clutch in, off the throttle
+ 32.0     0.0    0.00      0.0    1.0     1   # coast, no drive torque at all

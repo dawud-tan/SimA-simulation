@@ -1,0 +1,66 @@
+# Scripted driver keyframe table.
+#
+# Loaded by drv_script_load() and by FChronoPhysicsThread::ArmScript, which
+# searches this directory for a bare name:
+#
+#     UnrealEditor SimA.uproject -game -ChronoScript=example
+#     bash driver/run.sh dump driver/scripts/example.txt 50
+#
+# Six whitespace-separated fields per line. '#' starts a comment anywhere.
+#
+#   t         seconds from the start of the run
+#   steer     -1 .. +1, DEVICE convention: positive is CLOCKWISE, the
+#             driver's right. The single flip into Chrono's positive-left
+#             convention happens in ChronoPhysicsThread.cpp and nowhere else.
+#   throttle   0 .. 1
+#   brake      0 .. 1
+#   clutch     0 .. 1, where 1 = pedal DOWN = disengaged. Same sense as the
+#             real pedal axis and as ChManualTransmissionShafts.
+#   gear      -1 reverse, 0 neutral, 1..5 forward
+#
+# t must not go backwards; the loader rejects that and names the line.
+#
+# The four analog channels are LINEARLY INTERPOLATED between keyframes. That
+# is not smoothing for looks: a step change between two 1 ms samples commands
+# an infinite steering rate, drives an unbounded value into the shim's FFB
+# damping term, and hits TMeasy with a slip transient no hand could produce.
+# Write ramps, not steps.
+#
+# GEAR is the exception. It holds the earlier keyframe's value until the next
+# one is reached, because there is no physical state between 2nd and 3rd.
+#
+# Past the last keyframe the script HOLDS its final values and reports ended.
+# It does not zero the controls -- that would change the trajectory a referee
+# rule is about to be asked to judge.
+
+#  t     steer  throttle  brake  clutch  gear
+
+  0.0     0.00    0.00     0.0    1.0     1   # clutch in, 1st selected
+  0.5     0.00    0.00     0.0    1.0     1
+  1.0     0.00    0.25     0.0    1.0     1   # some revs before biting
+  2.5     0.00    0.35     0.0    0.0     1   # 1.5 s clutch release
+  6.0     0.00    0.35     0.0    0.0     1   # rolling straight
+
+# A gear change. An H-pattern shifter crosses NEUTRAL on every change, and
+# neutral is the path that used to drop the car through the ground before the
+# shim stopped passing SetGear(0) to the transmission (CHRONO_NEUTRAL_GEAR_RATIO
+# is 1e20 and MINRES stops converging on it). A script that never leaves 1st
+# would never exercise that.
+  6.1     0.00    0.00     0.0    1.0     0   # clutch in, through neutral
+  6.4     0.00    0.00     0.0    1.0     0
+  6.5     0.00    0.00     0.0    1.0     2   # 2nd selected
+  7.2     0.00    0.45     0.0    0.0     2   # engaged, back on power
+
+# A lane change: 0.20 of lock is about 7 deg at the road wheel, which the M5
+# sweep measured at -3.52 N.m of column torque -- comfortably inside the
+# friction circle, so this stays a valid quasi-static input.
+ 10.0     0.00    0.45     0.0    0.0     2
+ 11.0     0.20    0.45     0.0    0.0     2
+ 12.0     0.00    0.45     0.0    0.0     2
+ 13.0    -0.20    0.45     0.0    0.0     2
+ 14.0     0.00    0.45     0.0    0.0     2
+
+# Stop: off the throttle, onto the brake, clutch in before the engine stalls.
+ 15.0     0.00    0.00     0.4    0.0     2
+ 17.0     0.00    0.00     0.6    1.0     2
+ 20.0     0.00    0.00     0.6    1.0     2

@@ -1,0 +1,30 @@
+{
+  "Name": "Innova 205/65R16 TMeasy Rear",
+  "Type": "Tire",
+  "Template": "TMeasyTire",
+  "Design": {
+    "Unloaded Radius [m]": 0.33645,
+    "Mass [kg]": 11.5,
+    "Inertia [kg.m2]": [
+      0.35,
+      0.62,
+      0.35
+    ],
+    "Width [m]": 0.205,
+    "Rim Radius [m]": 0.2032,
+    "Roundness of Cross Section": 0.1
+  },
+  "Coefficient of Friction": 0.85,
+  "Rolling Resistance Coefficient": 0.012,
+  "Vehicle Type": "Passenger",
+  "Load Index": 95,
+  "Visualization": {
+    "Width": 0.205,
+    "Radius": 0.33645,
+    "Rim Radius": 0.2032
+  },
+  "Parking Torque": {
+    "Twist Stiffness [Nm/rad]": 3440.2,
+    "Patch Width [m]": 0.16
+  }
+}
